@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>DeepSeek 整页翻译 - 设置</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main>
+      <h1>DeepSeek 整页翻译 · 设置</h1>
+
+      <form id="settings-form">
+        <label>
+          <span>DeepSeek API Key</span>
+          <div class="row">
+            <input id="api-key" type="password" placeholder="sk-..." autocomplete="off" spellcheck="false" />
+            <button id="toggle-key" type="button" class="secondary">显示</button>
+          </div>
+          <small>
+            在 <a href="https://platform.deepseek.com/api_keys" target="_blank" rel="noreferrer">DeepSeek 开放平台</a>
+            创建。Key 只保存在本机浏览器中，不会同步。
+          </small>
+        </label>
+
+        <label>
+          <span>模型</span>
+          <input id="model" list="model-options" spellcheck="false" />
+          <datalist id="model-options">
+            <option value="deepseek-chat"></option>
+            <option value="deepseek-reasoner"></option>
+          </datalist>
+          <small>推荐 deepseek-chat：速度快、成本低。deepseek-reasoner 会先输出推理过程，翻译很慢。</small>
+        </label>
+
+        <label>
+          <span>默认目标语言</span>
+          <select id="target-lang"></select>
+        </label>
+
+        <div class="actions">
+          <button type="submit">保存</button>
+          <button id="test" type="button" class="secondary">保存并测试连接</button>
+        </div>
+        <p id="status" class="status"></p>
+      </form>
+    </main>
+
+    <script src="settings.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>

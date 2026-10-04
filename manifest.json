@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "DeepSeek 整页翻译",
+  "version": "0.1.0",
+  "description": "使用 DeepSeek 官方 API 翻译整个网页。",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": ["https://api.deepseek.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "DeepSeek 整页翻译",
+    "default_popup": "popup.html"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "commands": {
+    "toggle-translation": {
+      "suggested_key": { "default": "Alt+A" },
+      "description": "翻译当前页面 / 切换原文与译文"
+    }
+  }
+}

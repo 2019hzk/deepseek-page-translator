@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <title>DeepSeek 整页翻译</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <h1>DeepSeek 整页翻译</h1>
+      <a id="open-options" href="#">设置</a>
+    </header>
+
+    <label class="field">
+      <span>翻译为</span>
+      <select id="target-lang"></select>
+    </label>
+
+    <button id="toggle" type="button">翻译当前页面</button>
+    <p id="status" class="status"></p>
+    <p class="hint">快捷键 Alt+A 可直接翻译 / 切换原文</p>
+
+    <script src="settings.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
